@@ -14,11 +14,18 @@ public class colors {
         System.out.println(colors);
 
         iterateColors(colors);
+        insertToAL(colors, "black");
+        System.out.println(colors);
     }
     // Write a Java program to iterate through all elements in an array list.
     public static void iterateColors(List<String> list) {
         for (String l : list) {
             System.out.println(l);
         }
+    }
+
+    // Write a Java program to insert an element into the array list at the first position.
+    public static void insertToAL(List<String> list, String element) {
+        list.add(0, element);
     }
 }
