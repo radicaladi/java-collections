@@ -25,6 +25,10 @@ public class colors {
         System.out.println("==========");
         removeThirdIndex(colors);
         System.out.println(colors);
+        System.out.println("==========");
+        searchList(colors, "orange");
+        searchList(colors, "violet");
+        System.out.println("==========");
     }
     // Write a Java program to iterate through all elements in an array list.
     public static void iterateColors(List<String> list) {
@@ -53,4 +57,14 @@ public class colors {
     public static void removeThirdIndex(List<String> list) {
         list.remove(3);
     }
+
+    // Write a Java program to search an element in an array list.
+    public static void searchList(List<String> list, String element) {
+        if (list.contains(element)) {
+            System.out.println("found it!");
+        } else {
+            System.out.println("not on the list!");
+        }
+    }
+
 }
