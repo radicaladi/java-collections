@@ -29,6 +29,9 @@ public class colors {
         searchList(colors, "orange");
         searchList(colors, "violet");
         System.out.println("==========");
+        System.out.println("Before sorting: " + colors);
+        sortTheList(colors);
+        System.out.println("After sorting: " + colors);
     }
     // Write a Java program to iterate through all elements in an array list.
     public static void iterateColors(List<String> list) {
@@ -65,6 +68,11 @@ public class colors {
         } else {
             System.out.println("not on the list!");
         }
+    }
+
+    // Write a Java program to sort a given array list.
+    public static void sortTheList(List<String> list) {
+        Collections.sort(list);
     }
 
 }
