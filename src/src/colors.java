@@ -32,6 +32,19 @@ public class colors {
         System.out.println("Before sorting: " + colors);
         sortTheList(colors);
         System.out.println("After sorting: " + colors);
+        System.out.println("==========");
+
+        List<String> colorWheel = new ArrayList<>();
+        colorWheel.add("Red");
+        colorWheel.add("Green");
+        colorWheel.add("Blue");
+        colorWheel.add("Yellow");
+        System.out.println(colorWheel);
+        System.out.println("==========");
+        System.out.println("Before copying colors to c-wheel: " + colors);
+        copyTheList(colors, colorWheel);
+        System.out.println("After copying colors to c-wheel: " + colors);
+        System.out.println("Color wheel: " + colorWheel);
     }
     // Write a Java program to iterate through all elements in an array list.
     public static void iterateColors(List<String> list) {
@@ -73,6 +86,11 @@ public class colors {
     // Write a Java program to sort a given array list.
     public static void sortTheList(List<String> list) {
         Collections.sort(list);
+    }
+
+    // Write a Java program to copy one array list into another.
+    public static void copyTheList(List<String> list1, List<String> list2) {
+        Collections.copy(list1, list2); // arraylists must be equal size or will throw exception
     }
 
 }
