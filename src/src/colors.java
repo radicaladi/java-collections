@@ -15,7 +15,10 @@ public class colors {
 
         iterateColors(colors);
         insertToAL(colors, "black");
-        System.out.println(colors);
+        System.out.println("==========");
+        System.out.println(colors); // checking if color inserted
+        System.out.println("==========");
+        grabAnElement(4, colors);
     }
     // Write a Java program to iterate through all elements in an array list.
     public static void iterateColors(List<String> list) {
@@ -27,5 +30,11 @@ public class colors {
     // Write a Java program to insert an element into the array list at the first position.
     public static void insertToAL(List<String> list, String element) {
         list.add(0, element);
+    }
+
+    // Write a Java program to retrieve an element (at a specified index) from a given array list.
+    public static void grabAnElement(int index, List<String> list) {
+        String element = list.get(index); // must store it to access it
+        System.out.println(element);
     }
 }
