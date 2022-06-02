@@ -22,6 +22,9 @@ public class colors {
         System.out.println("==========");
         updateAnElement(0, colors, "violet");
         System.out.println(colors);
+        System.out.println("==========");
+        removeThirdIndex(colors);
+        System.out.println(colors);
     }
     // Write a Java program to iterate through all elements in an array list.
     public static void iterateColors(List<String> list) {
@@ -44,5 +47,10 @@ public class colors {
     // Write a Java program to update specific array element by given element.
     public static void updateAnElement(int index, List<String> list, String element) {
         list.set(index, element);
+    }
+
+    // Write a Java program to remove the third element from an array list.
+    public static void removeThirdIndex(List<String> list) {
+        list.remove(3);
     }
 }
