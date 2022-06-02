@@ -41,10 +41,15 @@ public class colors {
         colorWheel.add("Yellow");
         System.out.println(colorWheel);
         System.out.println("==========");
+
         System.out.println("Before copying colors to c-wheel: " + colors);
         copyTheList(colors, colorWheel);
         System.out.println("After copying colors to c-wheel: " + colors);
         System.out.println("Color wheel: " + colorWheel);
+        System.out.println("==========");
+
+        shuffleList(colors);
+        System.out.println("After shuffling colors: " + colors);
     }
     // Write a Java program to iterate through all elements in an array list.
     public static void iterateColors(List<String> list) {
@@ -91,6 +96,11 @@ public class colors {
     // Write a Java program to copy one array list into another.
     public static void copyTheList(List<String> list1, List<String> list2) {
         Collections.copy(list1, list2); // arraylists must be equal size or will throw exception
+    }
+
+    // Write a Java program to shuffle elements in an array list.
+    public static void shuffleList(List<String> list) {
+        Collections.shuffle(list);
     }
 
 }
