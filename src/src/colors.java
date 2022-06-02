@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.*;
 
 // Write a Java program to create a new array list,
@@ -11,5 +12,13 @@ public class colors {
         colors.add("blue");
         colors.add("yellow");
         System.out.println(colors);
+
+        iterateColors(colors);
+    }
+    // Write a Java program to iterate through all elements in an array list.
+    public static void iterateColors(List<String> list) {
+        for (String l : list) {
+            System.out.println(l);
+        }
     }
 }
