@@ -19,6 +19,9 @@ public class colors {
         System.out.println(colors); // checking if color inserted
         System.out.println("==========");
         grabAnElement(4, colors);
+        System.out.println("==========");
+        updateAnElement(0, colors, "violet");
+        System.out.println(colors);
     }
     // Write a Java program to iterate through all elements in an array list.
     public static void iterateColors(List<String> list) {
@@ -36,5 +39,10 @@ public class colors {
     public static void grabAnElement(int index, List<String> list) {
         String element = list.get(index); // must store it to access it
         System.out.println(element);
+    }
+
+    // Write a Java program to update specific array element by given element.
+    public static void updateAnElement(int index, List<String> list, String element) {
+        list.set(index, element);
     }
 }
