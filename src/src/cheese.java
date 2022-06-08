@@ -25,6 +25,12 @@ public class cheese {
         System.out.println("==========");
 
         comparedList(cheese, favoriteCheese);
+        System.out.println("==========");
+
+        System.out.println("Favorite cheeses pre-swap: " + favoriteCheese);
+        swappingElements(favoriteCheese, 2, 0);
+        System.out.println("Favorite cheeses post-swap: " + favoriteCheese);
+        System.out.println("==========");
     }
 
     // Write a Java program to reverse elements in an array list.
@@ -52,6 +58,11 @@ public class cheese {
         }
         comparedResult.removeAll(Collections.singleton(""));
         System.out.println("Matching elements: " + comparedResult);
+    }
+
+    // Write a Java program of swap two elements in an array list.
+    public static void swappingElements (List<String> list, int index, int index2) {
+        Collections.swap(list, index, index2);
     }
 
 }
