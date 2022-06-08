@@ -21,7 +21,7 @@ public class cheese {
         favoriteCheese.add("Gorgonzola");
         favoriteCheese.add("Gouda");
         favoriteCheese.add("munster");
-        System.out.println(favoriteCheese);
+        System.out.println("list of favorite cheeses: " + favoriteCheese);
         System.out.println("==========");
 
         comparedList(cheese, favoriteCheese);
@@ -31,6 +31,8 @@ public class cheese {
         swappingElements(favoriteCheese, 2, 0);
         System.out.println("Favorite cheeses post-swap: " + favoriteCheese);
         System.out.println("==========");
+
+        joinedLists(favoriteCheese, cheese);
     }
 
     // Write a Java program to reverse elements in an array list.
@@ -63,6 +65,17 @@ public class cheese {
     // Write a Java program of swap two elements in an array list.
     public static void swappingElements (List<String> list, int index, int index2) {
         Collections.swap(list, index, index2);
+    }
+
+    // Write a Java program to join two array lists.
+    public static void joinedLists (List<String> list, List<String> list2) {
+        List<String> joined = new ArrayList<>();
+        for(String e : list) {
+            Collections.addAll(joined, e);
+        }
+        joined.addAll(list2);
+        System.out.println(joined);
+//  NOTE: creates new list because I don't want to replace original lists, instead an instance of a new joined list.
     }
 
 }
