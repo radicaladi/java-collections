@@ -14,6 +14,14 @@ public class cars {
 
         LinkedList<String> joinedList = linking_two_lists(carTypes, carTypes2);
         System.out.println("New linked list: " + joinedList);
+
+        ArrayList<String> autos = new ArrayList<>();
+        autos.add("Audi");
+        autos.add("BMW");
+        autos.add("Volkswagen");
+        System.out.println("Autos before emptied: " + autos);
+        emptyList(autos);
+        System.out.println("Autos emptied: " + autos);
     }
 
     public static LinkedList<String> linking_two_lists(LinkedList<String> listOne, LinkedList<String> listTwo) {
@@ -22,5 +30,10 @@ public class cars {
         joinedList.add(String.valueOf(listTwo));
         return joinedList;
         }
+
+    //Write a Java program to empty an array list.
+    public static void emptyList (ArrayList<String> list) {
+        list.removeAll(list);
+    }
 
 }
