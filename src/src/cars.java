@@ -19,9 +19,11 @@ public class cars {
         autos.add("Audi");
         autos.add("BMW");
         autos.add("Volkswagen");
+        checkIfEmptyArrayList(autos); //making check if empty
         System.out.println("Autos before emptied: " + autos);
         emptyList(autos);
         System.out.println("Autos emptied: " + autos);
+        checkIfEmptyArrayList(autos); //checking if empty again
     }
 
     public static LinkedList<String> linking_two_lists(LinkedList<String> listOne, LinkedList<String> listTwo) {
@@ -34,6 +36,14 @@ public class cars {
     //Write a Java program to empty an array list.
     public static void emptyList (ArrayList<String> list) {
         list.removeAll(list);
+    }
+
+    //Write a Java program to test an array list is empty or not.
+    public static void checkIfEmptyArrayList (ArrayList<String> list) {
+        if (list.isEmpty()) {
+            System.out.println("this list is empty!");
+        }
+        else System.out.println("this list has contents!");
     }
 
 }
