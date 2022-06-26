@@ -24,6 +24,16 @@ public class cars {
         emptyList(autos);
         System.out.println("Autos emptied: " + autos);
         checkIfEmptyArrayList(autos); //checking if empty again
+
+        ArrayList<String> bmws = new ArrayList<>(8);
+        bmws.add("m3");
+        bmws.add("m5");
+        bmws.add("m8");
+        bmws.add("x1");
+        bmws.add("x2");
+        System.out.println("bmw list before trim: " + bmws);
+        trimArrayList(bmws);
+        System.out.println("bmw list after trim: " + bmws);;
     }
 
     public static LinkedList<String> linking_two_lists(LinkedList<String> listOne, LinkedList<String> listTwo) {
@@ -44,6 +54,11 @@ public class cars {
             System.out.println("this list is empty!");
         }
         else System.out.println("this list has contents!");
+    }
+
+    //Write a Java program to trim the capacity of an array list the current list size.
+    public static void trimArrayList (ArrayList<String> list) {
+        list.trimToSize();
     }
 
 }
