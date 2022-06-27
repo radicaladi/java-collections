@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class cars {
@@ -33,7 +34,12 @@ public class cars {
         bmws.add("x2");
         System.out.println("bmw list before trim: " + bmws);
         trimArrayList(bmws);
-        System.out.println("bmw list after trim: " + bmws);;
+        System.out.println("bmw list after trim: " + bmws);
+
+        increaseArrayListSize(bmws, 7);
+        bmws.add("z4");
+        bmws.add("i7");
+        System.out.println("bmw list after list increase: " + bmws);
     }
 
     public static LinkedList<String> linking_two_lists(LinkedList<String> listOne, LinkedList<String> listTwo) {
@@ -59,6 +65,11 @@ public class cars {
     //Write a Java program to trim the capacity of an array list the current list size.
     public static void trimArrayList (ArrayList<String> list) {
         list.trimToSize();
+    }
+
+    //Write a Java program to increase the size of an array list
+    public static void increaseArrayListSize (ArrayList<String> list, int number) {
+        list.ensureCapacity(number);
     }
 
 }
