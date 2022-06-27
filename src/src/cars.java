@@ -40,6 +40,12 @@ public class cars {
         bmws.add("z4");
         bmws.add("i7");
         System.out.println("bmw list after list increase: " + bmws);
+
+        replaceSecondElementOfArrayList(bmws, "BMW 8");
+        System.out.println("listed BMWs: ");
+        for (String model : bmws) {
+            System.out.println(model);
+        }
     }
 
     public static LinkedList<String> linking_two_lists(LinkedList<String> listOne, LinkedList<String> listTwo) {
@@ -47,29 +53,33 @@ public class cars {
         joinedList.add(String.valueOf(listOne));
         joinedList.add(String.valueOf(listTwo));
         return joinedList;
-        }
+    }
 
     //Write a Java program to empty an array list.
-    public static void emptyList (ArrayList<String> list) {
+    public static void emptyList(ArrayList<String> list) {
         list.removeAll(list);
     }
 
     //Write a Java program to test an array list is empty or not.
-    public static void checkIfEmptyArrayList (ArrayList<String> list) {
+    public static void checkIfEmptyArrayList(ArrayList<String> list) {
         if (list.isEmpty()) {
             System.out.println("this list is empty!");
-        }
-        else System.out.println("this list has contents!");
+        } else System.out.println("this list has contents!");
     }
 
     //Write a Java program to trim the capacity of an array list the current list size.
-    public static void trimArrayList (ArrayList<String> list) {
+    public static void trimArrayList(ArrayList<String> list) {
         list.trimToSize();
     }
 
     //Write a Java program to increase the size of an array list
-    public static void increaseArrayListSize (ArrayList<String> list, int number) {
+    public static void increaseArrayListSize(ArrayList<String> list, int number) {
         list.ensureCapacity(number);
+    }
+
+    //Write a Java program to replace the second element of a ArrayList with the specified element.
+    public static void replaceSecondElementOfArrayList(ArrayList<String> list, String new_element) {
+        list.set(2, new_element);
     }
 
 }
