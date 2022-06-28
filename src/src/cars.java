@@ -43,9 +43,7 @@ public class cars {
 
         replaceSecondElementOfArrayList(bmws, "BMW 8");
         System.out.println("listed BMWs: ");
-        for (String model : bmws) {
-            System.out.println(model);
-        }
+        printAllElementsOfArrayListByIndex(bmws);
     }
 
     public static LinkedList<String> linking_two_lists(LinkedList<String> listOne, LinkedList<String> listTwo) {
@@ -80,6 +78,13 @@ public class cars {
     //Write a Java program to replace the second element of a ArrayList with the specified element.
     public static void replaceSecondElementOfArrayList(ArrayList<String> list, String new_element) {
         list.set(2, new_element);
+    }
+
+    //Write a Java program to print all the elements of a ArrayList using the position of the elements.
+    public static void printAllElementsOfArrayListByIndex (ArrayList<String> list) {
+        for (String element : list) {
+            System.out.println(element);
+        }
     }
 
 }
