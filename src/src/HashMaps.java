@@ -12,6 +12,8 @@ public class HashMaps {
         Iterator<Map.Entry<Integer, String>> jordanIterator = jordanShoes.entrySet().iterator();
         iterateAllElementsInHashMap(jordanIterator);
 
+        countSizeOfHashMap(jordanShoes);
+
     }
 
     // Write a Java program to associate the specified value with the specified key in a HashMap.
@@ -21,11 +23,17 @@ public class HashMaps {
         }
     }
 
-    //Write a Java program to iterate through all elements in a hash list.
+    //Write a Java program to iterate through all elements in a hash map.
     public static void iterateAllElementsInHashMap (Iterator<Map.Entry<Integer, String>> iterator) {
         while(iterator.hasNext()) {
             System.out.print(iterator.next());
             System.out.print(", ");
         }
+        System.out.println("\n");
+    }
+
+    //Write a Java program to count the number of key-value (size) mappings in a map.
+    public static void countSizeOfHashMap (HashMap<Integer, String> map) {
+        System.out.println("Size of this hash map: " + map.size());
     }
 }
