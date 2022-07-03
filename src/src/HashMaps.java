@@ -14,6 +14,15 @@ public class HashMaps {
 
         countSizeOfHashMap(jordanShoes);
 
+        HashMap<Integer, String> jordanShoes2 = new HashMap<>();
+        jordanShoes2.put(4, "Cement");
+        jordanShoes2.put(5, "Bred");
+        System.out.println("jordan list 2 before copy: " + jordanShoes2);
+
+        copyAllMappingsToSeparateMap(jordanShoes,jordanShoes2);
+        System.out.println("Jordan list 2 after copy: " + jordanShoes2);
+
+
     }
 
     // Write a Java program to associate the specified value with the specified key in a HashMap.
@@ -35,5 +44,10 @@ public class HashMaps {
     //Write a Java program to count the number of key-value (size) mappings in a map.
     public static void countSizeOfHashMap (HashMap<Integer, String> map) {
         System.out.println("Size of this hash map: " + map.size());
+    }
+
+    //Write a Java program to copy all of the mappings from the specified map to another map.
+    public static void copyAllMappingsToSeparateMap (HashMap<Integer, String> map1, HashMap<Integer, String> map2) {
+        map2.putAll(map1);
     }
 }
