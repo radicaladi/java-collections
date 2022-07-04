@@ -22,6 +22,8 @@ public class HashMaps {
         copyAllMappingsToSeparateMap(jordanShoes,jordanShoes2);
         System.out.println("Jordan list 2 after copy: " + jordanShoes2);
 
+        emptyHashMap(jordanShoes2);
+        System.out.println("Jordans2 list after empty: " + jordanShoes2);
 
     }
 
@@ -46,8 +48,13 @@ public class HashMaps {
         System.out.println("Size of this hash map: " + map.size());
     }
 
-    //Write a Java program to copy all of the mappings from the specified map to another map.
+    //Write a Java program to copy all the mappings from the specified map to another map.
     public static void copyAllMappingsToSeparateMap (HashMap<Integer, String> map1, HashMap<Integer, String> map2) {
         map2.putAll(map1);
+    }
+
+    //Write a Java program to remove all the mappings from a map
+    public static void emptyHashMap (HashMap<Integer, String> map) {
+        map.clear();
     }
 }
