@@ -25,6 +25,9 @@ public class HashMaps {
         emptyHashMap(jordanShoes2);
         System.out.println("Jordans2 list after empty: " + jordanShoes2);
 
+        boolean result = checkForEmptyKeyValues(jordanShoes2);
+        System.out.println("is this hashmap empty?: " + result);
+
     }
 
     // Write a Java program to associate the specified value with the specified key in a HashMap.
@@ -56,5 +59,10 @@ public class HashMaps {
     //Write a Java program to remove all the mappings from a map
     public static void emptyHashMap (HashMap<Integer, String> map) {
         map.clear();
+    }
+
+    //Write a Java program to check whether a map contains key-value mappings (empty) or not.
+    public static boolean checkForEmptyKeyValues (HashMap<Integer, String> map) {
+        return map.isEmpty();
     }
 }
