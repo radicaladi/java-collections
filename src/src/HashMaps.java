@@ -22,11 +22,14 @@ public class HashMaps {
         copyAllMappingsToSeparateMap(jordanShoes,jordanShoes2);
         System.out.println("Jordan list 2 after copy: " + jordanShoes2);
 
+        boolean checkEmpty1 = checkForEmptyKeyValues(jordanShoes2); //checking before emptied
+        System.out.println("is this hashmap empty?: " + checkEmpty1);
+
         emptyHashMap(jordanShoes2);
         System.out.println("Jordans2 list after empty: " + jordanShoes2);
 
-        boolean result = checkForEmptyKeyValues(jordanShoes2);
-        System.out.println("is this hashmap empty?: " + result);
+        boolean checkEmpty2 = checkForEmptyKeyValues(jordanShoes2); //checking after empty
+        System.out.println("is this hashmap empty?: " + checkEmpty2);
 
     }
 
