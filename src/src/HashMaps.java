@@ -31,6 +31,9 @@ public class HashMaps {
         boolean checkEmpty2 = checkForEmptyKeyValues(jordanShoes2); //checking after empty
         System.out.println("is this hashmap empty?: " + checkEmpty2);
 
+        HashMap<Integer,String> new_hash_map= new HashMap<Integer,String>();
+        new_hash_map = (HashMap)jordanShoes.clone();
+        System.out.println("Cloned map: " + new_hash_map);
     }
 
     // Write a Java program to associate the specified value with the specified key in a HashMap.
@@ -68,4 +71,9 @@ public class HashMaps {
     public static boolean checkForEmptyKeyValues (HashMap<Integer, String> map) {
         return map.isEmpty();
     }
+
+    //Write a Java program to get a shallow copy of a HashMap instance.
+//    public static void shallowCopyOfHashmap (HashMap<Integer, String> MapToCopy, HashMap<Integer, String> CloneMap) {
+//        CloneMap = (HashMap<Integer, String>) MapToCopy.clone();
+//    }
 }
